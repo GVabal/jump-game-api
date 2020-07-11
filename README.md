@@ -1,25 +1,27 @@
-# danske-bank-coding-task
-Homework assignment – Task #3: Back end dev
+# Jump Game API
 
-API that accepts an array of digits, determines if the goal specified in given task is reachable. Provides the most efficient path as well.
+API, which tells whether the end of provided numbers sequence can be reached according to the game’s rules. Application will return already processed results from database, if provided sequence was requested before. 
 
 Run with Docker:
-`docker run -p 80:80 gvabal/danske-bank-coding-task`
+`docker run -p {your port}:8080 gvabal/jump-game-api`
 
-Endpoints (assuming the application is running locally):
+Run with Maven:
+`./mvnw package && java -jar target/*.jar`
 
-`curl -X GET http://localhost/sequences`
+Endpoints (assuming the application is running locally on port 80):
+
+`curl -X GET http://localhost/jump-game`
 
 - returns all sequences from database
 
-`curl -X GET http://localhost/sequences/{id}` 
+`curl -X GET http://localhost/jump-game/{id}` 
 
 - returns sequence by id
 
-`curl -X POST -H "Content-Type: application/json" -d '{"list":[1,2,3,4,5]}' http://localhost/sequences` 
+`curl -X POST -H "Content-Type: application/json" -d '{"list":[1,2,3,4,5]}' http://localhost/jump-game` 
 
-- takes list of digits in json body, processes it and returns json object of the sequence. If sequence was requested to calculate before, returns that sequence instead.
+- takes list of digits in json body, processes it and returns json object of the sequence. If sequence has been requested to calculate before, returns that sequence instead.
 
-`curl -X DELETE http://localhost/sequences` 
+`curl -X DELETE http://localhost/jump-game` 
 
 - deletes all sequences from database. For convenience
