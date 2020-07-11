@@ -1,4 +1,4 @@
-package dev.vabalas.codingtask.dto;
+package dev.vabalas.jumpGame.dto;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

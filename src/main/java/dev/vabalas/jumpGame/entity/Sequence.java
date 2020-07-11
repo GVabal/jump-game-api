@@ -1,4 +1,4 @@
-package dev.vabalas.codingtask.entity;
+package dev.vabalas.jumpGame.entity;
 
 import javax.persistence.*;
 

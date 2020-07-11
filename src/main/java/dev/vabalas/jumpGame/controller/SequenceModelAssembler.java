@@ -1,6 +1,6 @@
-package dev.vabalas.codingtask.controller;
+package dev.vabalas.jumpGame.controller;
 
-import dev.vabalas.codingtask.entity.Sequence;
+import dev.vabalas.jumpGame.entity.Sequence;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;

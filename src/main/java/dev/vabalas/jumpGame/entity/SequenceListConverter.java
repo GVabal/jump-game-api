@@ -1,12 +1,10 @@
-package dev.vabalas.codingtask.entity;
+package dev.vabalas.jumpGame.entity;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 import java.util.ArrayList;
 import java.util.List;
 
-// Had issues with storing List to database, ended up with storing as a String to work around it
-// so this class is not being used for now.
 @Converter
 public class SequenceListConverter implements AttributeConverter<List<Integer>, String> {
 

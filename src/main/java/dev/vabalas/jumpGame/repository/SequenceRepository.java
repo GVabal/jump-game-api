@@ -1,12 +1,10 @@
-package dev.vabalas.codingtask.repository;
+package dev.vabalas.jumpGame.repository;
 
-import dev.vabalas.codingtask.entity.Sequence;
+import dev.vabalas.jumpGame.entity.Sequence;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface SequenceRepository extends JpaRepository<Sequence, Integer> {
@@ -16,6 +14,4 @@ public interface SequenceRepository extends JpaRepository<Sequence, Integer> {
     boolean existsByList(String list);
 
     Page<Sequence> findAll(Pageable pageable);
-
-    List<Sequence> findAll();
 }

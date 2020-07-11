@@ -1,16 +1,14 @@
-package dev.vabalas.codingtask.service;
+package dev.vabalas.jumpGame.service;
 
-import dev.vabalas.codingtask.dto.SequenceDto;
-import dev.vabalas.codingtask.entity.Sequence;
-import dev.vabalas.codingtask.exception.EntityNotFoundException;
-import dev.vabalas.codingtask.repository.SequenceRepository;
+import dev.vabalas.jumpGame.dto.SequenceDto;
+import dev.vabalas.jumpGame.entity.Sequence;
+import dev.vabalas.jumpGame.exception.EntityNotFoundException;
+import dev.vabalas.jumpGame.repository.SequenceRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import static dev.vabalas.codingtask.service.ServiceHelper.*;
-
-import java.util.List;
+import static dev.vabalas.jumpGame.service.ServiceHelper.*;
 
 @Service
 public class SequenceService {
@@ -33,10 +31,6 @@ public class SequenceService {
 
     public Page<Sequence> findAll(Pageable pageable) {
         return sequenceRepository.findAll(pageable);
-    }
-
-    public List<Sequence> findAll() {
-        return sequenceRepository.findAll();
     }
 
     public Sequence findOne(Integer id) {

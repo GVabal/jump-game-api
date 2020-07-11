@@ -1,9 +1,8 @@
-package dev.vabalas.codingtask.controller;
+package dev.vabalas.jumpGame.controller;
 
-import dev.vabalas.codingtask.dto.MultiSequenceDto;
-import dev.vabalas.codingtask.dto.SequenceDto;
-import dev.vabalas.codingtask.entity.Sequence;
-import dev.vabalas.codingtask.service.SequenceService;
+import dev.vabalas.jumpGame.dto.SequenceDto;
+import dev.vabalas.jumpGame.entity.Sequence;
+import dev.vabalas.jumpGame.service.SequenceService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
@@ -13,7 +12,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "sequences")
+@RequestMapping(path = "jump-game")
 public class SequenceController {
 
     private final SequenceService sequenceService;
@@ -42,11 +41,6 @@ public class SequenceController {
     @PostMapping
     public Sequence testOne(@RequestBody @Validated SequenceDto sequenceDto) {
         return sequenceService.testSequence(sequenceDto);
-    }
-
-    @PostMapping(path = "/batch")
-    public void testMany(@RequestBody @Validated MultiSequenceDto multiSequenceDto) {
-        // Due to issues with MultiSequenceDto this was not implemented.
     }
 
     @DeleteMapping

@@ -1,13 +1,13 @@
-package dev.vabalas.codingtask;
+package dev.vabalas.jumpGame;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CodingTaskApplication {
+public class JumpGameApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CodingTaskApplication.class, args);
+		SpringApplication.run(JumpGameApplication.class, args);
 	}
 
 }

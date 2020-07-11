@@ -1,4 +1,4 @@
-package dev.vabalas.codingtask.service;
+package dev.vabalas.jumpGame.service;
 
 import java.util.ArrayList;
 import java.util.List;
