@@ -14,7 +14,7 @@
   <artifactId>coding-task</artifactId>  
   <version>0.0.1-SNAPSHOT</version>  
   <name>coding-task</name>  
-  <description>Danske Bank FuturePros_IT assessment</description>  
+  <description>Jump Game API</description>  
   <properties> 
     <java.version>11</java.version>
   </properties>
